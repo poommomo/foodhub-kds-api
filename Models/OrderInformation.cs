@@ -15,15 +15,3 @@ namespace FoodHub.Models
         public string Table { get; set; }        
     }
 }
-
-/**
-* Id
-* Number
-* TotalPrice
-* *Pos*
-* OrderDateTime
-* FinishDateTime
-* IsFinished
-* *Table*
-* *[Menu]*
-*/

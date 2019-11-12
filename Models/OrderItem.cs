@@ -3,8 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FoodHub.Models
 {
-    public class OrderItems
+    public class OrderItem
     {
+        public long Id { get; set; }
         public long OrderInformationId { get; set; }
         [ForeignKey("OrderInformationId")]
         public OrderInformation OrderInformation { get; set; }
