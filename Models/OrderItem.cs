@@ -8,12 +8,13 @@ namespace FoodHub.Models
         public long Id { get; set; }
         public long OrderInformationId { get; set; }
         [ForeignKey("OrderInformationId")]
-        public OrderInformation OrderInformation { get; set; }
+        public virtual OrderInformation OrderInformation { get; set; }
         public long MenuId { get; set; }
         [ForeignKey("MenuId")]
-        public Menu Menu { get; set; }
+        public virtual Menu Menu { get; set; }
         public long OrderStatusId { get; set; }
         [ForeignKey("OrderStatusId")]
         public OrderStatus OrderStatus { get; set; }
+        public int Quantity {get;set;}
     }
 }

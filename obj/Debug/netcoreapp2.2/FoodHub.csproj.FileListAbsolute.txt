@@ -1,3 +1,66 @@
+D:/4th_year/OOC/FoodHub/bin/Debug/netcoreapp2.2/appsettings.Development.json
+D:/4th_year/OOC/FoodHub/bin/Debug/netcoreapp2.2/appsettings.json
+D:/4th_year/OOC/FoodHub/bin/Debug/netcoreapp2.2/Properties/launchSettings.json
+D:/4th_year/OOC/FoodHub/bin/Debug/netcoreapp2.2/FoodHub.deps.json
+D:/4th_year/OOC/FoodHub/bin/Debug/netcoreapp2.2/FoodHub.runtimeconfig.json
+D:/4th_year/OOC/FoodHub/bin/Debug/netcoreapp2.2/FoodHub.runtimeconfig.dev.json
+D:/4th_year/OOC/FoodHub/bin/Debug/netcoreapp2.2/FoodHub.dll
+D:/4th_year/OOC/FoodHub/bin/Debug/netcoreapp2.2/FoodHub.pdb
+D:/4th_year/OOC/FoodHub/bin/Debug/netcoreapp2.2/FoodHub.Views.dll
+D:/4th_year/OOC/FoodHub/bin/Debug/netcoreapp2.2/FoodHub.Views.pdb
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.csprojAssemblyReference.cache
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.RazorAssemblyInfo.cache
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.RazorAssemblyInfo.cs
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.AssemblyInfoInputs.cache
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.AssemblyInfo.cs
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.TagHelpers.input.cache
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.TagHelpers.output.cache
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.RazorCoreGenerate.cache
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.cshtml.g.cs
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/Razor/Views/Home/Privacy.cshtml.g.cs
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/Razor/Views/Shared/Error.cshtml.g.cs
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_CookieConsentPartial.cshtml.g.cs
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.cshtml.g.cs
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/Razor/Views/_ViewImports.cshtml.g.cs
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/Razor/Views/_ViewStart.cshtml.g.cs
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.RazorTargetAssemblyInfo.cache
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.RazorTargetAssemblyInfo.cs
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.Views.pdb
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.dll
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.pdb
+D:/4th_year/OOC/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.csproj.CopyComplete
+D:/4th_year/OOC/FoodHub/bin/Debug/netcoreapp2.2/web.config
+C:/Users/TUF FX505/Desktop/FoodHub/bin/Debug/netcoreapp2.2/FoodHub.deps.json
+C:/Users/TUF FX505/Desktop/FoodHub/bin/Debug/netcoreapp2.2/FoodHub.runtimeconfig.json
+C:/Users/TUF FX505/Desktop/FoodHub/bin/Debug/netcoreapp2.2/FoodHub.runtimeconfig.dev.json
+C:/Users/TUF FX505/Desktop/FoodHub/bin/Debug/netcoreapp2.2/FoodHub.dll
+C:/Users/TUF FX505/Desktop/FoodHub/bin/Debug/netcoreapp2.2/FoodHub.pdb
+C:/Users/TUF FX505/Desktop/FoodHub/bin/Debug/netcoreapp2.2/FoodHub.Views.dll
+C:/Users/TUF FX505/Desktop/FoodHub/bin/Debug/netcoreapp2.2/FoodHub.Views.pdb
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.csprojAssemblyReference.cache
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.csproj.CoreCompileInputs.cache
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.RazorAssemblyInfo.cache
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.RazorAssemblyInfo.cs
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.AssemblyInfoInputs.cache
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.AssemblyInfo.cs
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.TagHelpers.input.cache
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.TagHelpers.output.cache
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.RazorCoreGenerate.cache
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.g.cshtml.cs
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/Razor/Views/Home/Privacy.g.cshtml.cs
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/Razor/Views/Shared/Error.g.cshtml.cs
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_CookieConsentPartial.g.cshtml.cs
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.g.cshtml.cs
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_ValidationScriptsPartial.g.cshtml.cs
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/Razor/Views/_ViewImports.g.cshtml.cs
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/Razor/Views/_ViewStart.g.cshtml.cs
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.RazorTargetAssemblyInfo.cache
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.RazorTargetAssemblyInfo.cs
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.Views.pdb
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.dll
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.pdb
+C:/Users/TUF FX505/Desktop/FoodHub/obj/Debug/netcoreapp2.2/FoodHub.csproj.CopyComplete
 /Users/Momo/Developer/Visual_Studio/FoodHub/bin/Debug/netcoreapp2.2/FoodHub.deps.json
 /Users/Momo/Developer/Visual_Studio/FoodHub/bin/Debug/netcoreapp2.2/FoodHub.runtimeconfig.json
 /Users/Momo/Developer/Visual_Studio/FoodHub/bin/Debug/netcoreapp2.2/FoodHub.runtimeconfig.dev.json

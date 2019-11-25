@@ -12,6 +12,8 @@ namespace FoodHub.Models
         public DateTime OrderDateTime { get; set; }
         public DateTime FinishDateTime { get; set; }
         public bool IsFinished { get; set; }
-        public string Table { get; set; }        
+        public long LocationId { get; set; }
+        [ForeignKey("LocationId")]
+        public virtual Location Location { get; set; }        
     }
 }

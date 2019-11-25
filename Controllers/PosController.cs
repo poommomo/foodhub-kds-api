@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using FoodHub.Models;
-using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace FoodHub.Controllers
 {
@@ -19,11 +19,27 @@ namespace FoodHub.Controllers
 
         // GET: api/pos/menus
         [HttpGet]
-        public  IEnumerable<Menu> GetMenu() 
+        public IActionResult GetMenu() 
         {
             var menus = _context.Menus.ToList();
 
-            return  menus;
+            if (menus.Any())
+            {
+                return  Ok(menus);
+            } else
+            {
+                return NoContent();
+            }
+        }
+
+        
+
+        [HttpGet]
+        public ActionResult OrderFood() {
+            var data = _context.OrderItems.Include(x => x.Menu)
+                                          .Where(x => x.Id == 5)
+                                          .Select(x => x.Menu);
+            return Ok(data);
         }
 
     }

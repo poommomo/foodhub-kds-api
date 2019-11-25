@@ -29,7 +29,7 @@ namespace FoodHub
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer("Server=food-hub.cm7xn4tbtkt5.ap-southeast-1.rds.amazonaws.com;Database=FoodHub;User ID=admin;Password=rjV6vuN_8q;"));//Configuration.GetConnectionString("DefaultConnection")));
 
             services.Configure<CookiePolicyOptions>(options =>
             {
