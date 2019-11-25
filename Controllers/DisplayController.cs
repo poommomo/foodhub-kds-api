@@ -18,9 +18,33 @@ namespace FoodHub.Controllers
             _context = context;
         }
 
+        [HttpGet]
+        public IActionResult UpdateOrderStatus(long OrderId, long MenuId, long StatusId)
+        {
+            var orderItem = _context.OrderItems.SingleOrDefault(x => x.Id == OrderId && x.MenuId == MenuId);
+            
+            try
+            {
+                if (orderItem != null)
+                {
+                    orderItem.OrderStatusId = StatusId;
+                    _context.SaveChanges();
+                    return Ok();
+                } else
+                {
+                    return NotFound();
+                }
+            } 
+            catch
+            {
+                return new StatusCodeResult(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet]
         public IActionResult GetOrder() 
         {
-            var data = _context.OrderInformations.Include(x => x.OrderItems)
+            var orders = _context.OrderInformations.Include(x => x.OrderItems)
                                                      .ThenInclude(x => x.Menu)
                                                  .Where(x => !x.IsFinished)
                                                  .Select(x => new DisplayOrder
@@ -38,7 +62,7 @@ namespace FoodHub.Controllers
                                                      }).ToList()
                                                  });
 
-            return Ok(data);
+            return Ok(orders);
         }
     } 
 }
