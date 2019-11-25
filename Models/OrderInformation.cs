@@ -14,6 +14,8 @@ namespace FoodHub.Models
         public bool IsFinished { get; set; }
         public long LocationId { get; set; }
         [ForeignKey("LocationId")]
-        public virtual Location Location { get; set; }        
+        public virtual Location Location { get; set; }     
+
+        public virtual List<OrderItem> OrderItems { get; set; }   
     }
 }
