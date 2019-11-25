@@ -1,13 +1,13 @@
+using System;
 using Microsoft.AspNetCore.Mvc;
 using FoodHub.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 
 namespace FoodHub.Controllers
 {
-    // [Route("api/pos")]
-    // [ApiController]
     public class PosController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -17,7 +17,7 @@ namespace FoodHub.Controllers
             _context = context;
         }
 
-        // GET: api/pos/menus
+        // GET: pos/getmenu
         [HttpGet]
         public IActionResult GetMenu() 
         {
@@ -44,13 +44,43 @@ namespace FoodHub.Controllers
             }
         }
 
-        [HttpGet]
-        public ActionResult OrderFood() {
-            var data = _context.OrderItems.Include(x => x.Menu)
-                                          .Where(x => x.Id == 5)
-                                          .Select(x => x.Menu);
-            return Ok(data);
-        }
+        [HttpPost]
+        public ActionResult Order([FromBody] FoodOrder order)
+        {
+            try
+            {
+                var orderInformation = new OrderInformation
+                {
+                    Name = order.Name,
+                    TotalPrice = order.TotalPrice,
+                    IsFinished = false,
+                    LocationId = order.LocationId,
+                };
+                _context.Add(orderInformation);
+                _context.SaveChanges();
 
+                var orderItems = new List<OrderItem>();
+                foreach (OrderMenu menu in order.MenuList)
+                {
+                    var orderItem = new OrderItem
+                    {
+                        OrderInformationId = orderInformation.Id,
+                        MenuId = menu.MenuId,
+                        OrderStatusId = 1,
+                        Quantity = menu.Quantity
+                    };
+                    orderItems.Add(orderItem);
+                }
+                _context.AddRange(orderItems);
+                _context.SaveChanges();
+
+                return Ok();
+            } 
+            catch (Exception e) 
+            {
+                Console.Write(e);
+                return new StatusCodeResult(StatusCodes.Status500InternalServerError);
+            }
+        }
     }
 }
