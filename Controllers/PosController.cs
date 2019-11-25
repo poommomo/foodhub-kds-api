@@ -6,8 +6,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FoodHub.Controllers
 {
-    [Route("api/pos")]
-    [ApiController]
+    // [Route("api/pos")]
+    // [ApiController]
     public class PosController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -32,7 +32,17 @@ namespace FoodHub.Controllers
             }
         }
 
-        
+        [HttpGet]
+        public IActionResult GetTable() {
+            var tables = _context.Locations.ToList();
+
+            if (tables.Any())
+            {
+                return Ok(tables);
+            } else {
+                return NoContent();
+            }
+        }
 
         [HttpGet]
         public ActionResult OrderFood() {
