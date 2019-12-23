@@ -75,14 +75,15 @@ namespace FoodHub.Controllers
                                                  {
                                                      Id = x.Id,
                                                      Name = x.Name,
-                                                     OrderDateTime = x.OrderDateTime,
+                                                     OrderDateTime = x.OrderDateTime.AddTicks( - (x.OrderDateTime.Ticks % TimeSpan.TicksPerSecond)),
                                                      IsFinished = x.IsFinished,
                                                      Location = x.Location,
                                                      Menus = x.OrderItems.Select(y => new DisplayMenu
                                                      {
                                                          Id = y.Id,
                                                          Name = y.Menu.Name,
-                                                         Quantity = y.Quantity
+                                                         Quantity = y.Quantity,
+                                                         OrderStatus = y.OrderStatus
                                                      }).ToList()
                                                  });
 
