@@ -19,7 +19,30 @@ namespace FoodHub.Controllers
         }
 
         [HttpGet]
-        public IActionResult UpdateOrderStatus(long OrderId, long MenuId, long StatusId)
+        public IActionResult UpdateOrderStatus(long OrderId, bool IsFinished)
+        {
+            var order = _context.OrderInformations.SingleOrDefault(x => x.Id == OrderId);
+
+            try
+            {
+                if (order != null)
+                {
+                    order.IsFinished = IsFinished;
+                    _context.SaveChanges();
+                    return Ok();
+                } else
+                {
+                    return NotFound();
+                }
+            }
+            catch
+            {
+                return new StatusCodeResult(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet]
+        public IActionResult UpdateMenuStatus(long OrderId, long MenuId, long StatusId)
         {
             var orderItem = _context.OrderItems.SingleOrDefault(x => x.Id == OrderId && x.MenuId == MenuId);
             
@@ -44,9 +67,10 @@ namespace FoodHub.Controllers
         [HttpGet]
         public IActionResult GetOrder() 
         {
-            var orders = _context.OrderInformations.Include(x => x.OrderItems)
-                                                     .ThenInclude(x => x.Menu)
-                                                 .Where(x => !x.IsFinished)
+            var orders = _context.OrderInformations
+                                                    .Where(x => !x.IsFinished)
+                                                    .Include(x => x.OrderItems)
+                                                    .ThenInclude(x => x.Menu)
                                                  .Select(x => new DisplayOrder
                                                  {
                                                      Id = x.Id,
@@ -65,4 +89,5 @@ namespace FoodHub.Controllers
             return Ok(orders);
         }
     } 
+
 }
