@@ -34,7 +34,7 @@ namespace FoodHub.Controllers
                                                      Location = x.Location,
                                                      Menus = x.OrderItems.Select(y => new DisplayMenu
                                                      {
-                                                         Id = y.Id,
+                                                         Id = y.Menu.Id,
                                                          Name = y.Menu.Name,
                                                          Quantity = y.Quantity,
                                                          OrderStatus = y.OrderStatus
