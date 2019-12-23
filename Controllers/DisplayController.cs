@@ -19,6 +19,32 @@ namespace FoodHub.Controllers
         }
 
         [HttpGet]
+        public IActionResult GetPreviousOrder()
+        {
+            var orders = _context.OrderInformations
+                                                    .Where(x => x.IsFinished)
+                                                    .Include(x => x.OrderItems)
+                                                    .ThenInclude(x => x.Menu)
+                                                 .Select(x => new DisplayOrder
+                                                 {
+                                                     Id = x.Id,
+                                                     Name = x.Name,
+                                                     OrderDateTime = x.OrderDateTime.AddTicks( - (x.OrderDateTime.Ticks % TimeSpan.TicksPerSecond)),
+                                                     IsFinished = x.IsFinished,
+                                                     Location = x.Location,
+                                                     Menus = x.OrderItems.Select(y => new DisplayMenu
+                                                     {
+                                                         Id = y.Id,
+                                                         Name = y.Menu.Name,
+                                                         Quantity = y.Quantity,
+                                                         OrderStatus = y.OrderStatus
+                                                     }).ToList()
+                                                 });
+
+            return Ok(orders);
+        }
+
+        [HttpGet]
         public IActionResult UpdateOrderStatus(long OrderId, bool IsFinished)
         {
             var order = _context.OrderInformations.SingleOrDefault(x => x.Id == OrderId);
@@ -28,6 +54,9 @@ namespace FoodHub.Controllers
                 if (order != null)
                 {
                     order.IsFinished = IsFinished;
+                    if (IsFinished) {
+                        order.FinishDateTime = DateTime.Now;
+                    }
                     _context.SaveChanges();
                     return Ok();
                 } else
@@ -80,7 +109,7 @@ namespace FoodHub.Controllers
                                                      Location = x.Location,
                                                      Menus = x.OrderItems.Select(y => new DisplayMenu
                                                      {
-                                                         Id = y.Id,
+                                                         Id = y.Menu.Id,
                                                          Name = y.Menu.Name,
                                                          Quantity = y.Quantity,
                                                          OrderStatus = y.OrderStatus
