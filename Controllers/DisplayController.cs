@@ -31,6 +31,7 @@ namespace FoodHub.Controllers
                                                      Name = x.Name,
                                                      OrderDateTime = x.OrderDateTime.AddTicks( - (x.OrderDateTime.Ticks % TimeSpan.TicksPerSecond)),
                                                      IsFinished = x.IsFinished,
+                                                     IsVoided = x.IsVoided,
                                                      Location = x.Location,
                                                      Menus = x.OrderItems.Select(y => new DisplayMenu
                                                      {
@@ -45,7 +46,7 @@ namespace FoodHub.Controllers
         }
 
         [HttpGet]
-        public IActionResult UpdateOrderStatus(long OrderId, bool IsFinished)
+        public IActionResult UpdateOrderStatus(long OrderId, bool IsFinished, bool IsVoided = false)
         {
             var order = _context.OrderInformations.SingleOrDefault(x => x.Id == OrderId);
 
@@ -54,6 +55,7 @@ namespace FoodHub.Controllers
                 if (order != null)
                 {
                     order.IsFinished = IsFinished;
+                    order.IsVoided = IsVoided;
                     if (IsFinished) {
                         order.FinishDateTime = DateTime.Now;
                     }
@@ -97,7 +99,7 @@ namespace FoodHub.Controllers
         public IActionResult GetOrder() 
         {
             var orders = _context.OrderInformations
-                                                    .Where(x => !x.IsFinished)
+                                                    .Where(x => !x.IsFinished && !x.IsVoided)
                                                     .Include(x => x.OrderItems)
                                                     .ThenInclude(x => x.Menu)
                                                  .Select(x => new DisplayOrder
@@ -120,4 +122,4 @@ namespace FoodHub.Controllers
         }
     } 
 
-}
+}   
