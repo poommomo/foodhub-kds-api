@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FoodHub.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20191224171207_orderstatus-in-orderinfo")]
-    partial class orderstatusinorderinfo
+    [Migration("20191224172506_orderinfo-void")]
+    partial class orderinfovoid
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -63,6 +63,8 @@ namespace FoodHub.Migrations
 
                     b.Property<bool>("IsFinished");
 
+                    b.Property<bool>("IsVoided");
+
                     b.Property<long>("LocationId");
 
                     b.Property<string>("Name");
@@ -70,8 +72,6 @@ namespace FoodHub.Migrations
                     b.Property<DateTime>("OrderDateTime")
                         .ValueGeneratedOnAdd()
                         .HasDefaultValueSql("GETDATE()");
-
-                    b.Property<string>("OrderStatus");
 
                     b.Property<double>("TotalPrice");
 

@@ -9,6 +9,7 @@ namespace FoodHub.Models
         public string Name { get; set; }
         public DateTime OrderDateTime { get; set; }
         public bool IsFinished { get; set; }
+        public bool IsVoided { get; set; }
         public Location Location { get; set; }        
         public List<DisplayMenu> Menus { get; set; }
     }

@@ -61,6 +61,8 @@ namespace FoodHub.Migrations
 
                     b.Property<bool>("IsFinished");
 
+                    b.Property<bool>("IsVoided");
+
                     b.Property<long>("LocationId");
 
                     b.Property<string>("Name");
@@ -68,8 +70,6 @@ namespace FoodHub.Migrations
                     b.Property<DateTime>("OrderDateTime")
                         .ValueGeneratedOnAdd()
                         .HasDefaultValueSql("GETDATE()");
-
-                    b.Property<string>("OrderStatus");
 
                     b.Property<double>("TotalPrice");
 

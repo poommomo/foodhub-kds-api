@@ -2,20 +2,21 @@
 
 namespace FoodHub.Migrations
 {
-    public partial class orderstatusinorderinfo : Migration
+    public partial class orderinfovoid : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<string>(
-                name: "OrderStatus",
+            migrationBuilder.AddColumn<bool>(
+                name: "IsVoided",
                 table: "OrderInformations",
-                nullable: true);
+                nullable: false,
+                defaultValue: false);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "OrderStatus",
+                name: "IsVoided",
                 table: "OrderInformations");
         }
     }
