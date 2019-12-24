@@ -22,7 +22,7 @@ namespace FoodHub.Controllers
         public IActionResult GetPreviousOrder()
         {
             var orders = _context.OrderInformations
-                                                    .Where(x => x.IsFinished)
+                                                    .Where(x => x.IsFinished || x.IsVoided)
                                                     .Include(x => x.OrderItems)
                                                     .ThenInclude(x => x.Menu)
                                                  .Select(x => new DisplayOrder
