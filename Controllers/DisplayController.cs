@@ -75,7 +75,7 @@ namespace FoodHub.Controllers
         [HttpGet]
         public IActionResult UpdateMenuStatus(long OrderId, long MenuId, long StatusId)
         {
-            var orderItem = _context.OrderItems.SingleOrDefault(x => x.Id == OrderId && x.MenuId == MenuId);
+            var orderItem = _context.OrderItems.SingleOrDefault(x => x.OrderInformationId == OrderId && x.MenuId == MenuId);
             
             try
             {

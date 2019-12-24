@@ -1,0 +1,18 @@
+{
+    "Name": "Order-3",
+    "LocationId": 1,
+    "TotalPrice": 9999,
+    "MenuList": [{
+            "MenuId": 1,
+            "Quantity": 2
+        },
+        {
+            "MenuId": 2,
+            "Quantity": 1
+        },
+        {
+            "MenuId": 3,
+            "Quantity": 5
+        }
+    ]
+}
