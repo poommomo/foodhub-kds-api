@@ -100,6 +100,7 @@ namespace FoodHub.Controllers
         {
             var orders = _context.OrderInformations
                                                     .Where(x => !x.IsFinished && !x.IsVoided)
+                                                    .OrderByDescending(x => x.OrderDateTime)
                                                     .Include(x => x.OrderItems)
                                                     .ThenInclude(x => x.Menu)
                                                  .Select(x => new DisplayOrder
